@@ -1,7 +1,7 @@
 resource "tfe_variable_set" "test_variable_set" {
   name         = "Test_Variable_Set"
   description  = "Variable set for testing."
-  global       = false
+  global       = true
   organization = "ananth-hashicorp-terraform-workshop"
 }
 
