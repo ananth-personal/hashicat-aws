@@ -32,7 +32,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color -input=false -var='secret_value=${{ secrets.TEST_SECRET }}'
+        run: terraform plan -no-color -input=false -var='secret_value=${{ secrets.TEST_SECRET }}' -var='tfe_token=${{ secrets.TFE_TOKEN }}'
         continue-on-error: true
 
       - name: Terraform Plan Status
@@ -40,4 +40,4 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -input=false -var='secret_value=${{ secrets.TEST_SECRET }}'
+        run: terraform apply -auto-approve -input=false -var='secret_value=${{ secrets.TEST_SECRET }}' -var='tfe_token=${{ secrets.TFE_TOKEN }}'
