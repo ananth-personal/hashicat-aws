@@ -11,5 +11,5 @@ resource "tfe_variable" "test-secret" {
   category        = "env"
   description     = "Test Secret injected via CI/CD"
   variable_set_id = tfe_variable_set.test_variable_set.id
-  sensitive       = true
+  sensitive       = false
 }
