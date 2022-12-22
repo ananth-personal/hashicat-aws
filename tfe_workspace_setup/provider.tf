@@ -1,6 +1,7 @@
 terraform {
   required_providers {
     tfe = {
+      token   = var.tfe_token
       version = "~> 0.40.0"
     }
   }
