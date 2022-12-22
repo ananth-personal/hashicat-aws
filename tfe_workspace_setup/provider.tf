@@ -7,7 +7,7 @@ terraform {
   cloud {
     organization = "ananth-hashicorp-terraform-workshop"
     workspaces {
-      name = "custom-default"
+      name = "custom-default-workspace"
     }
   }
 }
