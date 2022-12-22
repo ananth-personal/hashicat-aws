@@ -13,5 +13,5 @@ terraform {
 }
 
 provider "tfe" {
-  token    = var.tfe_token
+  token = var.tfe_token
 }
